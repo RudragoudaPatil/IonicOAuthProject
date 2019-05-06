@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <firebase-ui></firebase-ui>
+  <h1 *ngIf="afAuth.auth.currentUser">
+    Welcome {{afAuth.auth.currentUser.displayName}}
+    </h1>
+    
+<ion-button *ngIf="afAuth.auth.currentUser" (click)="signout()">Sign-out</ion-button>
+</ion-content>
